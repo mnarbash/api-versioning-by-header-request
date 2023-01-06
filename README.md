@@ -11,9 +11,14 @@ composer require mnarbash/api-versioning-by-header-request
 
 ## Configuration
 
+Add ServiceProvider to `config/app.php` in `providers` section:
+```php  
+Mnarbash\ApiVersioningByHeaderRequest\ApiVerServiceProvider::class,
+```
+
 To configure the package, publish the configuration file using the following command:
 ```sh
-php artisan vendor:publish --provider="Mnarbash\ApiVersioningByHeaderRequest\ApiVersioningByHeaderRequestServiceProvider"
+php artisan vendor:publish --provider="Mnarbash\ApiVersioningByHeaderRequest\ApiVerServiceProvider" --tag=config
 ```
 
 This will create a `config/api-versioning-by-header-request.php` file in your project. You can modify the following options in this file:

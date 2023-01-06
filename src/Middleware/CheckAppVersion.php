@@ -27,7 +27,7 @@ class CheckAppVersion
         //throw UnsupportedAppVersionException::create($appVersion, $minSupportedAppVersion);
 
         return response()->json([
-            'message' => 'Unsupported App Version',
+            'message' => 'Unsupported App Version, Please Update Your App',
             'data' => [
                 'app_version' => $appVersion,
                 'min_supported_app_version' => $minSupportedAppVersion,
