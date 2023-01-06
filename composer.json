@@ -1,6 +1,8 @@
 {
     "name": "mnarbash/api-versioning-by-header-request",
     "description": "A package for managing API versioning in Laravel using request headers",
+    "type": "library",
+    "keywords": ["api","versioning","laravel","laravel-package"],
     "autoload": {
         "psr-4": {
             "Mnarbash\\ApiVersioningByHeaderRequest\\": "src/"

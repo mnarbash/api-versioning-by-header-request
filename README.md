@@ -48,17 +48,18 @@ This will create a `config/api-versioning.php` file in your project. You can mod
 
 To use the check api and riderct to new controller, apply it to a route as follows:
 
+-**Note**: Add the newer controller in the first of array. We use this order 
+to check the version and redirect to the older controller if version is not exist. 
+**Example**: If you have 2 controller with version 1 and 2 and you want
+to redirect to version 1 if version 2 is not exist,
+
 ```php
     Route::get('testVer', ApiVersioning::UseApiMultiVersions([
-        'default' => [TestApiController::class, 'testVer'], //set default version if not set in header
+        'V1' => [V1TestApiController::class, 'testVer'],
         'V0' => [TestApiController::class, 'testVer'], 
-        'V1' => [V1TestApiController::class, 'testVer']
+        '0' => [TestApiController::class, 'testVer'] //set default version if not set in header
     ]))
-    
-    // or
 
-    Route::get('testVer', ApiVersioning::UseApiVersions(
-    [TestApiController::class, 'testVer']));
 ```
 
 Also you can get api version from anywhere in your code like this:
