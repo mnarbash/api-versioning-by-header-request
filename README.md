@@ -54,7 +54,22 @@ The package includes the following middleware:
 To use the check api and riderct to new controller, apply it to a route as follows:
 
 ```php
- Route::get('testVer', ApiVersioning::UseApiVersions([Test::class, 'testVer']));
+    Route::get('testVer', ApiVersioning::UseApiMultiVersions([
+        'default' => [TestApiController::class, 'testVer'], //set default version if not set in header
+        'V0' => [TestApiController::class, 'testVer'], 
+        'V1' => [V1TestApiController::class, 'testVer']
+    ]))
+    
+    // or
+
+    Route::get('testVer', ApiVersioning::UseApiVersions(
+    [TestApiController::class, 'testVer']));
+```
+
+also you can get api version from anywhere in your code like this:
+
+```php
+    $apiVersion = ApiVersioning::getApiVersion();
 ```
 
 to use the check app middleware, apply it to a api $middlewareGroups in app/Http/Kernel file as follows:
