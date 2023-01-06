@@ -1,17 +1,19 @@
 {
     "name": "mnarbash/api-versioning-by-header-request",
     "description": "A package for managing API versioning in Laravel using request headers",
-    "type": "library",
-    "minimum-stability": "stable",
-    "authors": [
-        {
-            "name": "Mohammad Nizar Arbash",
-            "email": "mnarbash@zettaprog.com"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Mnarbash\\ApiVersioningByHeaderRequest\\": "src/"
+        },
+        "classmap": [
+            "src/Helper"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Nizar Arbash",
+            "email": "nezar.almohammad@gmail.com"
         }
-    }
+    ],
+    "require": {}
 }
