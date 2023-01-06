@@ -3,6 +3,7 @@
     "description": "A package for managing API versioning in Laravel using request headers",
     "type": "library",
     "keywords": ["api","versioning","laravel","laravel-package"],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Mnarbash\\ApiVersioningByHeaderRequest\\": "src/"
@@ -13,8 +14,8 @@
     },
     "authors": [
         {
-            "name": "Nizar Arbash",
-            "email": "nezar.almohammad@gmail.com"
+            "name": "Mohammad Nizar Arbash",
+            "email": "mnarbash@zettaprog.com"
         }
     ],
     "require": {}
