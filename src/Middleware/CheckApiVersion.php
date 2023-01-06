@@ -10,7 +10,7 @@ class CheckApiVersion
     public function handle(Request $request, Closure $next)
     {
         $apiVersion = $request->header('API-VERSION');
-        $apiVersion = $apiVersion ?: config('api-versioning-by-header-request.default_version');
+        $apiVersion = $apiVersion ?: config('api-versioning.default_version');
 
         $request->route()->setParameter('api_version', $apiVersion);
 
