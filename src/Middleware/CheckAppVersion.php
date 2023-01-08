@@ -26,17 +26,21 @@ class CheckAppVersion
 
         //throw UnsupportedAppVersionException::create($appVersion, $minSupportedAppVersion);
 
+        $updateUrls = config('api-versioning.update_urls', []);
+
+        $not_support_response_status_code = config('api-versioning.not_support_response_status_code', 422);
         return response()->json([
             'message' => 'Unsupported App Version, Please Update Your App',
             'data' => [
                 'app_version' => $appVersion,
                 'min_supported_app_version' => $minSupportedAppVersion,
+                'update_urls' => $updateUrls
             ],
             'errors' => [
                 'app_version' => [
                     'Unsupported App Version',
                 ],
             ],
-        ], 422);
+        ], $not_support_response_status_code);
     }
 }
