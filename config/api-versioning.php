@@ -16,7 +16,7 @@ return [
      *
      * Set the default api version
      */
-    'default_api_version' => 'v1',
+    'default_api_version' => 'V1',
 
 
     /*
@@ -41,7 +41,7 @@ return [
     /*
      * Set the minimum supported app version
      */
-    'min_supported_api_version' => 'v0',
+    'min_supported_api_version' => 'V0',
 
     /*
      * Set Return Update Url Data For Update App
