@@ -23,6 +23,13 @@ This package provides middleware for managing API versioning in Laravel using re
   classes in
   your route define.
 
+## Youtube Video
+Check out this video to see how to use this package in your project.
+
+[![Laravel API Versioning By Header Request](https://img.youtube.com/vi/2HeFCJieVLo/0.jpg)](https://www.youtube.com/watch?v=2HeFCJieVLo)
+
+https://youtu.be/2HeFCJieVLo
+
 ## Installation
 
 To install the package, run the following command:
